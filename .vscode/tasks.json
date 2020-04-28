@@ -1,0 +1,28 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "echo Hello",
+            "problemMatcher": []
+        },
+        {
+            "label": "build wasm",
+            "type": "shell",
+            "command": "cargo build --release --target wasm32-wasi",
+            "problemMatcher": []
+        },
+        {
+            "type": "cargo",
+            "subcommand": "build",
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "group": "build",
+            "label": "Rust: cargo build"
+        }
+    ]
+}
