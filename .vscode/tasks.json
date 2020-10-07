@@ -17,12 +17,24 @@
         },
         {
             "type": "cargo",
-            "subcommand": "build",
+            "command": "build",
             "problemMatcher": [
                 "$rustc"
             ],
             "group": "build",
             "label": "Rust: cargo build"
+        },
+        {
+            "label": "run wasmtime",
+            "type": "shell",
+            "command": "wasmtime target/wasm32-wasi/release/hello.wasm --dir=./ ./",
+            "problemMatcher": []
+        },
+        {
+            "label": "run wasmer",
+            "type": "shell",
+            "command": "wasmer target/wasm32-wasi/release/hello.wasm --backend llvm --dir=./ ./",
+            "problemMatcher": []
         }
     ]
 }
