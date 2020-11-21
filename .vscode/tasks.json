@@ -33,7 +33,7 @@
         {
             "label": "run wasmer",
             "type": "shell",
-            "command": "wasmer target/wasm32-wasi/release/hello.wasm --backend llvm --dir=./ ./",
+            "command": "wasmer target/wasm32-wasi/release/hello.wasm --llvm --dir=./ ./",
             "problemMatcher": []
         }
     ]
