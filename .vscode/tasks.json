@@ -35,6 +35,14 @@
             "type": "shell",
             "command": "wasmer target/wasm32-wasi/release/hello.wasm --llvm --dir=./ ./",
             "problemMatcher": []
+        },
+        {
+            "type": "cargo",
+            "command": "run",
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "label": "rust: cargo run"
         }
     ]
 }
