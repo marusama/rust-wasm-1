@@ -19,12 +19,12 @@ fn process(current_dir: &str) -> Result<(), String> {
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let program = args[0].clone();
-    if args.len() < 2 {
-        eprintln!("{} <input_folder>", program);
-        return;
+    println!("Args: {args:?}");
+    let mut dir = ".";
+    if args.len() >= 2 {
+        dir = &args[1];
     }
-    if let Err(err) = process(&args[1]) {
+    if let Err(err) = process(dir) {
         eprintln!("{}", err)
     }
 }
